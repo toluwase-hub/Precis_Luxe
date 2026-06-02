@@ -139,10 +139,10 @@ const Herosection = () => {
                       <FaLongArrowAltRight size={22} className="ml-4"  />
                     </motion.button>
 
-                    <button className="custom-prev absolute top-1/2 z-50 lg:-left-10 -left-4 md:-left-8 w-10 h-10  rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center duration-200 hover:bg-white/5 ">
+                    <button className="custom-prev absolute top-1/2 z-50 lg:-left-10 -left-4 md:-left-8 w-10 h-10  rounded-full bg-white/10  border border-white/20 flex items-center justify-center duration-200 hover:bg-white/5 ">
                       <MdOutlineKeyboardDoubleArrowLeft />
                     </button>
-                    <button className="custom-next absolute top-1/2 lg:-right-10 -right-4 md:-right-8 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center duration-200 hover:bg-white/5  ">
+                    <button className="custom-next absolute top-1/2 lg:-right-10 -right-4 md:-right-8 w-10 h-10 rounded-full bg-white/10 border border-white/10 flex items-center justify-center duration-200 hover:bg-white/5  ">
                       <MdOutlineKeyboardDoubleArrowRight />
                     </button>
                   </div>

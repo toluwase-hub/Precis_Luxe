@@ -22,23 +22,42 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
           `
 )
   .join("\n\n");
+
+  const previewWhatsappOrder = previewProduct => 
+    `${index + 1}. id: ${previewProduct.id}
+          Category: ${previewProduct.category}
+          Name: ${previewProduct.productName}
+          price:#${previewProduct.price}
+          `
+  .join("\n\n");
   
 
    const PhoneNumber = "+2349043933210";
   const message = `
     ORDER DETAILS
 
-    ${cart.length} ITEM ORDERED
+    ${cart.length} ${cart.length < 2 ? "ITEM" : "ITEMS"} ORDERED
 
     ${whatsappOrder}
     ---------------
    Total Price: #${totalPrice}
   `;
+
+  
   const whatsappurl = `https://wa.me/${PhoneNumber}?text=${encodeURIComponent(message)}`;
+  const previewwhatsappurl = `https://wa.me/${PhoneNumber}?text=${encodeURIComponent(previewWhatsappOrder)}`;
 
   const [numberProduct, setNumberProduct] = useState(10)
   const [previousCart, setPreviousCart] = useState([])
   const [notification, setNotification] = useState(false)
+
+  const [previewProduct, setPreviewProdcut] = useState(null)
+  const [showPreview, setShowPreview] = useState(false)
+
+  const handlePreviewProdcut = (product)=> {
+    setPreviewProdcut(product)
+    setShowPreview(true)
+  }
 
   const handleIncreaseProduct = ()=> {
     setNumberProduct(numberProduct + 10)
@@ -583,6 +602,11 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
                     bgcolor = "black"
                     textcolor = "white"
                      />
+
+                     <Button
+                     action = {()=> handlePreviewProdcut(product)}
+                     buttontext = "Preview"
+                     textcolor = "white" />
                     
                 </div>
             ))
@@ -617,7 +641,7 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
                 <div><img src={carts.img} alt={carts.id} className='w-15 h-15 object-cover' /></div>
                 <div>
                 <p className='font-bold'>{carts.productName}</p>
-                <p>#{carts.price.toFixed(2)}</p>
+                <p>#{carts.price}</p>
                 <p className='italic'>{carts.category}</p> 
                 <button onClick={()=> deleteFromCart(carts.id)} className='bg-red-700 text-white py-2 px-2'>Delete ❌</button>
                 </div>
@@ -666,6 +690,40 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
           }
          
 
+
+       </div>
+
+
+       <div className={`fixed top-0 z-50 right-0 overflow-auto h-screen bg-white transition-all duration-300 ${showPreview ? "translate-x-0" : "translate-x-full"}`}>
+
+        {
+          previewProduct && (
+            
+            <div className='px-4 py-5'>
+              <button onClick={()=> setShowPreview(false)}>❌</button>
+              <h1 className='font-bold text-2xl py-2'>Product Details</h1>
+              <img className='w-100 h-100' src={previewProduct.img} alt={previewProduct.id} />
+              <h1 className='font-bold'>{previewProduct.productName}</h1>
+              <p className='italic'>#{previewProduct.price}</p>
+              <p className='font-bold'>{previewProduct.category}</p>
+
+              <div>
+                 <Button
+                    buttontext = "Add to Cart"
+                    action = {()=> addToCart(previewProduct)}
+                    bgcolor = "black"
+                    textcolor = "white"
+                     />
+
+                    <a href={previewwhatsappurl}  target="_blank" rel="noreferrer">
+            <button  className={`bg-black text-white px-2 py-2 hover:bg-black/90 `}
+          >Order Now</button>
+            </a>
+              </div>
+
+            </div>
+          )
+        }
 
        </div>
 

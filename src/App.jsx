@@ -16,6 +16,7 @@ import Popup from './assets/Components/Popup'
 import Off from './assets/Components/Off'
 import About from './assets/Components/About'
 import Letconnect from './assets/Components/Letconnect'
+import Footer from './assets/Components/Footer'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
     <Off />
     <About />
     <Letconnect />
+    <Footer />
 
     <Whatsappicon />
     <Backtotop />

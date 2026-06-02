@@ -14,7 +14,7 @@ const Navbar = ({cart,showCart,setShowCart}) => {
     // nav background changing on scroll
     useEffect( () => {
     const Show = () =>{
-      if(window.scrollY > 200){
+      if(window.scrollY > 100){
         setNavBackGround(true)
       }  
       else{
