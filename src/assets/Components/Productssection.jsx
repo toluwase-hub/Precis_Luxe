@@ -51,7 +51,8 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
 
   
   const whatsappurl = `https://wa.me/${PhoneNumber}?text=${encodeURIComponent(message)}`;
-  const previewwhatsappurl = `https://wa.me/${PhoneNumber}?text=${encodeURIComponent(previewWhatsappOrder())}`;
+  const previewwhatsappurl = previewProduct ? `https://wa.me/${PhoneNumber}?text=${encodeURIComponent(previewWhatsappOrder())}`
+  : "null";
 
   const [numberProduct, setNumberProduct] = useState(10)
   const [previousCart, setPreviousCart] = useState([])
