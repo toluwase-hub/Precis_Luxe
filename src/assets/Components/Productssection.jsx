@@ -23,13 +23,19 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
 )
   .join("\n\n");
 
-  const previewWhatsappOrder = previewProduct => 
-    `${index + 1}. id: ${previewProduct.id}
+  const [previewProduct, setPreviewProdcut] = useState(null)
+  const [showPreview, setShowPreview] = useState(false)
+
+
+  const previewWhatsappOrder = () => ` 
+    ORDER DETAILS
+
+     id: ${previewProduct.id}
           Category: ${previewProduct.category}
           Name: ${previewProduct.productName}
           price:#${previewProduct.price}
           `
-  .join("\n\n");
+  
   
 
    const PhoneNumber = "+2349043933210";
@@ -45,14 +51,13 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
 
   
   const whatsappurl = `https://wa.me/${PhoneNumber}?text=${encodeURIComponent(message)}`;
-  const previewwhatsappurl = `https://wa.me/${PhoneNumber}?text=${encodeURIComponent(previewWhatsappOrder)}`;
+  const previewwhatsappurl = `https://wa.me/${PhoneNumber}?text=${encodeURIComponent(previewWhatsappOrder())}`;
 
   const [numberProduct, setNumberProduct] = useState(10)
   const [previousCart, setPreviousCart] = useState([])
   const [notification, setNotification] = useState(false)
-
-  const [previewProduct, setPreviewProdcut] = useState(null)
-  const [showPreview, setShowPreview] = useState(false)
+  
+  
 
   const handlePreviewProdcut = (product)=> {
     setPreviewProdcut(product)
@@ -603,10 +608,8 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
                     textcolor = "white"
                      />
 
-                     <Button
-                     action = {()=> handlePreviewProdcut(product)}
-                     buttontext = "Preview"
-                     textcolor = "white" />
+                     <button className='flex justify-center items-center gap-1 font-light text-sm pt-2' onClick={()=> handlePreviewProdcut(product)}>Preview < FaLongArrowAltRight /></button>                    
+            
                     
                 </div>
             ))
@@ -672,7 +675,7 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
                 <div><img src={previousCart.img} alt={previousCart.id} className='w-15 h-15 object-cover' /></div>
                 <div>
                 <p className='font-bold'>{previousCart.productName}</p>
-                <p>#{previousCart.price.toFixed(2)}</p>
+                <p>#{previousCart.price}</p>
                 <p className='italic'>{previousCart.category}</p> 
                 <button onClick={()=> addBackitem(previousCart)} className='bg-red-700 text-white py-2 px-2'>Add</button>
                 </div>
@@ -693,7 +696,7 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
 
        </div>
 
-
+          {/* preview */}
        <div className={`fixed top-0 z-50 right-0 overflow-auto h-screen bg-white transition-all duration-300 ${showPreview ? "translate-x-0" : "translate-x-full"}`}>
 
         {
@@ -702,12 +705,12 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
             <div className='px-4 py-5'>
               <button onClick={()=> setShowPreview(false)}>❌</button>
               <h1 className='font-bold text-2xl py-2'>Product Details</h1>
-              <img className='w-100 h-100' src={previewProduct.img} alt={previewProduct.id} />
+              <img className='w-100 h-100 object-cover' src={previewProduct.img} alt={previewProduct.id} />
               <h1 className='font-bold'>{previewProduct.productName}</h1>
               <p className='italic'>#{previewProduct.price}</p>
               <p className='font-bold'>{previewProduct.category}</p>
 
-              <div>
+              <div className='flex gap-1'>
                  <Button
                     buttontext = "Add to Cart"
                     action = {()=> addToCart(previewProduct)}
