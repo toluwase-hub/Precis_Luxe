@@ -102,7 +102,7 @@ const Bestsellers = () => {
   ];
 
   return (
-    <div className="contain py-8">
+    <div id="Shop" className="contain py-8 scroll-mt-24">
         <div className="flex">
             <h1 className="font-bold text-lg">BEST SELLERS</h1> <span className="bg-red-500 text-white rounded-full items-center justify-center  flex w-10 h-5 text-sm">Hot</span>
 

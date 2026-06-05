@@ -7,7 +7,7 @@ import { FaTiktok } from "react-icons/fa";
 
 const Letconnect = () => {
   return (
-    <div className="overflow-hidden text-white relative ">
+    <div id="Contact" className="overflow-hidden text-white relative scroll-mt-24 ">
       <div style={{ width: "100%", height: "600px", position: "absolute" }}>
         <DarkVeil
           hueShift={0}

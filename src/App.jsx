@@ -24,7 +24,7 @@ function App() {
   const [showCart, setShowCart] = useState(false)
   
   return (
-    <>
+    <div className='scroll-smooth'>
     <Navbar cart={cart} showCart={showCart} setShowCart={setShowCart}  />
     <Herosection  />
     <Bestsellers />
@@ -37,7 +37,7 @@ function App() {
     <Whatsappicon />
     <Backtotop />
      
-    </>
+    </div>
   )
 }
 

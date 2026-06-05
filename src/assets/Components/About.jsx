@@ -3,7 +3,7 @@ import Button from './Button'
 
 const About = () => {
   return (
-    <div className='contain '>
+    <div id='About' className='contain scroll-mt-24 '>
 
         <h1 className='text-center font-bold text-4xl'>ABOUT US</h1>
         <h1 className='font-light text-center text-sm my-1 '>ABOUT PRECIS_LUXE</h1>

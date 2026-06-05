@@ -36,15 +36,15 @@ const Navbar = ({cart,showCart,setShowCart}) => {
 
      {/* tablet and mobile navlinks */}
 
-    <nav className={`lg:hidden overflow-hidden transition-all duration-250 zoom-101 z-50 absolute w-[90%] h-screen bg-black/80 pt-5 ${navBackground ? " bg-black/80 text-white" : "bg-black/80"} ${mobile ? "max-w-[89%]" : "max-w-0"}`}>
+    <nav className={`lg:hidden overflow-hidden transition-all duration-350 zoom-101 z-50 absolute w-[90%] h-screen bg-black/80 pt-5 ${navBackground ? " bg-black/80 text-white" : "bg-black/80"} ${mobile ? "translate-x-0" : "-translate-x-110" }`}>
            <div className=' w-[90%] mx-auto py-5 flex justify-between'>
             <div>
                  <ul className='flex flex-col gap-3'>
-                <li >HOME</li>
-                <li>SHOP</li>
-                <li>COLLECTIONS</li>
-                <li>ABOUT</li>
-                <li>CONTACT</li>
+                <li><a href="#Home">HOME</a></li>
+                <li><a href="#Shop">SHOP</a></li>
+                <li><a href="#Collection">COLLECTIONS</a></li>
+                <li><a href="#About">ABOUT</a></li>
+                <li><a href="#Contact">CONTACT</a></li>
             </ul> 
              <div className='py-5'><IoPersonOutline size={20} /></div> 
 
@@ -68,11 +68,11 @@ const Navbar = ({cart,showCart,setShowCart}) => {
 
             <div>
                 <ul className='gap-6 hidden lg:flex'>
-                <li>HOME</li>
-                <li>SHOP</li>
-                <li>COLLECTIONS</li>
-                <li>ABOUT</li>
-                <li>CONTACT</li>
+                <li><a href="#Home">HOME</a></li>
+                <li><a href="#Shop">SHOP</a></li>
+                <li><a href="#Collection">COLLECTIONS</a></li>
+                <li><a href="#About">ABOUT</a></li>
+                <li><a href="#Contact">CONTACT</a></li>
             </ul>
 
              <h1 className='font-bold text-2xl md:3xl italic lg:hidden'>PRECIS<span className='font-light text-sm italic'>LUXE</span></h1>

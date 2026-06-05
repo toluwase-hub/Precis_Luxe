@@ -47,7 +47,7 @@ const Herosection = () => {
     },
   ];
   return (
-    <div className="w-full h-screen ">
+    <div id="Home" className="w-full h-screen ">
       <Swiper
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
         navigation={{

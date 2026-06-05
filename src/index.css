@@ -7,3 +7,7 @@
 .swiper-button-prev{
     display: none !important;
 }
+
+html{
+    scroll-behavior: smooth;
+}
