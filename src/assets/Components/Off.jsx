@@ -22,7 +22,7 @@ const Off = () => {
           WHY PRECIS<span className="text-sm font-light italic">_LUXE</span>
         </h1>
         <div className="contain grid gap-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 items-center justify-around">
-          <div className="flex items-center lg:justify-center gap-3 lg:border-r pb-3 pr-8 border-b lg:border-b-0 border-black/20 ">
+          <div className="flex items-center lg:justify-center gap-3  pb-3 pr-8  py-5 rounded-tr-2xl rounded-bl-2xl hover:bg-white/5 backdrop:backdrop-blur-2xl">
             <div className="text-4xl">💸</div>
             <div>
               <h1 className="font-bold text-lg">5% OFF</h1>
@@ -30,7 +30,7 @@ const Off = () => {
             </div>
           </div>
 
-          <div className="flex items-center lg:justify-center gap-3 lg:border-r lg:border-b-0 pr-8 pb-3 border-b border-black/20">
+          <div className="flex items-center lg:justify-center gap-3  pr-8 pb-3  py-5 rounded-tr-2xl rounded-bl-2xl hover:bg-white/5 backdrop:backdrop-blur-2xl">
             <div className="text-4xl">
               <TbTruckReturn />
             </div>
@@ -40,7 +40,7 @@ const Off = () => {
             </div>
           </div>
 
-          <div className="flex items-center lg:justify-center gap-3 lg:border-r pb-3 pr-8 border-b lg:border-b-0 border-black/20">
+          <div className="flex items-center lg:justify-center gap-3  pb-3 pr-8  py-5 rounded-tr-2xl rounded-bl-2xl hover:bg-white/5 backdrop:backdrop-blur-2xl">
             <div className="text-4xl">
               <RiSecurePaymentLine />
             </div>
@@ -50,7 +50,7 @@ const Off = () => {
             </div>
           </div>
 
-          <div className="flex items-center lg:justify-center gap-3 md:border-b pb-3 lg:border-b-0 border-black/20">
+          <div className="flex items-center lg:justify-center gap-3  pb-3  py-5 rounded-tr-2xl rounded-bl-2xl hover:bg-white/5 backdrop:backdrop-blur-2xl ">
             <div className="text-4xl">🕛</div>
             <div>
               <h1 className="font-bold text-lg">24/7 SUPPORT</h1>

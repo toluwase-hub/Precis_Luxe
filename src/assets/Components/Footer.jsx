@@ -34,18 +34,18 @@ const Footer = () => {
         <div>
           <h1 className='font-bold text-xl'>SHOP</h1>
           <ul>
-            <li  className='hover:underline'>Hoodies</li>
-            <li className='hover:underline'>Joggers</li>
-            <li className='hover:underline'>Sets</li>
-            <li className='hover:underline'>New Drops</li>
-            <li className='hover:underline'>All Products</li>
+            <li  className='hover:underline'><a href="#Collection">Hoodies</a> </li>
+            <li className='hover:underline'><a href="#Collection">Joggers</a> </li>
+            <li className='hover:underline'><a href="#Shop">Sets</a> </li>
+            <li className='hover:underline'><a href="#Collection">New Drops</a> </li>
+            <li className='hover:underline'><a href="#Collection"> All Products</a></li>
           </ul>
         </div>
 
         <div>
           <h1 className='font-bold text-xl'>COMPANY</h1>
           <ul>
-            <li className='hover:underline'>About us</li>
+            <li className='hover:underline'><a href="#About"> About us</a></li>
             <li className='hover:underline'>Sue Guide</li>
             <li className='hover:underline'>Shipping</li>
             <li className='hover:underline'>Returns</li>
@@ -57,7 +57,7 @@ const Footer = () => {
          <div>
           <h1 className='font-bold text-xl'>HELP</h1>
           <ul>
-            <li className='hover:underline'>Contact us</li>
+            <li className='hover:underline'><a href="#Contact">Contact us</a> </li>
             <li className='hover:underline'>Track Order</li>
             <li className='hover:underline'>Privacy Policy</li>
             <li className='hover:underline'>Terms & Condition</li>

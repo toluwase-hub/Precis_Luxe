@@ -29,13 +29,13 @@ const Letconnect = () => {
             <p className="text-sm font-light">Reach out to us directly.</p>
           </div>
           <div>
-            <button className="bg-black text-white px-3 py-2 flex items-center justify-center gap-2 hover:bg-black/90 ">
+            <button className="bg-black text-white px-3 py-2 flex items-center justify-center gap-2 hover:bg-black/80 ">
               <MdWhatsapp size={25} /> ORDER ON WHATSAPP
             </button>
           </div>
         </div>
 
-        <div className="flex flex-col lg:items-center lg:text-center">
+        <div className="flex flex-col lg:items-center lg:text-center lg:py-5 rounded-tr-2xl rounded-bl-2xl hover:bg-white/5 backdrop:backdrop-blur-2xl">
           <h1 className="text-3xl">
             <FaInstagram />
           </h1>
@@ -43,7 +43,7 @@ const Letconnect = () => {
           <h1 className="text-sm  font-light">@precis_official</h1>
         </div>
 
-        <div className="flex flex-col lg:items-center lg:text-center">
+        <div className="flex flex-col lg:items-center lg:text-center lg:py-5 rounded-tr-2xl rounded-bl-2xl hover:bg-white/5 backdrop:backdrop-blur-2xl">
           <h1 className="text-3xl">
             <FaTiktok />
           </h1>
@@ -51,7 +51,7 @@ const Letconnect = () => {
           <h1 className="text-sm  font-light">@precis_official</h1>
         </div>
 
-        <div className="flex flex-col lg:items-center lg:text-center">
+        <div className="flex flex-col lg:items-center lg:text-center lg:py-5 rounded-tr-2xl rounded-bl-2xl hover:bg-white/5 backdrop:backdrop-blur-2xl">
           <h1 className="text-3xl">📩</h1>
           <h1 className="font-bold text-2xl">EMAIL</h1>
           <h1 className="text-sm  font-light">@precis_official.com</h1>
