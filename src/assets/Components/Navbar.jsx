@@ -206,9 +206,12 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
               className="flex relative"
             >
               <HiOutlineShoppingBag size={20} />{" "}
-              <div className="bg-red-500 w-3 h-3 absolute -right-1 rounded-full flex items-center justify-center px-2 py-2 text-white">
+              <div className={`bg-red-500 w-3 h-3 absolute -right-1 rounded-full flex items-center justify-center text-sm text-white ${cart.length >= 10 ? "px-2.5 py-2.5" : "px-2 py-2"} `}>
                 {cart.length}
               </div>
+
+             { !showCart && ( <span className={`animate-bounce px-2 py-1 rounded text-right fixed top-18 bg-white text-black right-4 text-sm font-extralight w-[40%] lg:w-[12%] md:w-[20%]`}><h1>{ cart.length > 1 ? "Click the cart icon to view your added  items" :  "Click the cart icon to view your added  item"}</h1></span> )
+}
             </div>
           </div>
         </nav>

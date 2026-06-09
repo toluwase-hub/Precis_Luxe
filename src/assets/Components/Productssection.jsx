@@ -598,7 +598,7 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
             product.slice(0, numberProduct).map((product)=>(
                 <div className='border px-2 py-2 relative '>
                     <div className='absolute bg-black text-white w-10 flex items-center justify-center'>{product.id}</div>
-                    <img src={product.img} alt={product.id} className='w-60 h-70 object-cover hover:rotate-y-180 transition-all duration-400' />
+                    <img src={product.img} alt={product.id} className='w-full h-70 object-cover hover:rotate-y-180 transition-all duration-400' />
                     <h1 className='line-clamp-1'>{product.productName}</h1>
                      <h1 className={`${product.price >= 10000  ? "text-red-500" : "text-green-500"}`}>{ product.price !== "USD" ? "#" : "$"}{product.price.toFixed(2)} <span className='font-light text-sm text-gray-500 italic line-through'>{(product.price + 500).toFixed(2) }</span></h1>
                     <h1 className='font-bold mb-2'>{product.category}</h1>
