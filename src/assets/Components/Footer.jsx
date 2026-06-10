@@ -76,7 +76,7 @@ const Footer = () => {
       <h1 className='text-center font-light text-sm relative pt-5 '>
         © 2026 <span>Precis_Luxe</span>. All rights reserved.
     </h1>
-    <p className='text-center font-light text-sm '><a href="#">designed & developed by Teeweb coder</a></p>
+    <p className='text-center font-light text-sm '><a href="#">designed & developed by Teeweb Dev</a></p>
 
     </div>
   )
