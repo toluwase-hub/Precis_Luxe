@@ -6,12 +6,38 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdOutlineCancelPresentation } from "react-icons/md";
 import Button from "./Button";
+import { FaShoppingCart } from "react-icons/fa";
 const Navbar = ({ cart, showCart, setShowCart }) => {
   const [mobile, setMobile] = useState(false);
 
   const [navBackground, setNavBackGround] = useState(false);
 
   const [active, setActive] = useState("Home");
+   
+ const closeHomeLink = ()=> {
+       setActive("Home")
+        setMobile(!mobile)
+ }
+
+ const closeShopLink = ()=> {
+        setActive("Shop")
+        setMobile(!mobile)
+ }
+
+ const closeCollectionLink = ()=> {
+       setActive("Collection")
+       setMobile(!mobile)
+ }
+
+ const closeAboutLink = ()=> {
+       setActive("About")
+      setMobile(!mobile)
+ }
+
+ const closeContactLink = ()=> {
+     setActive("Contact")
+    setMobile(!mobile)
+ }
 
   // nav background changing on scroll
   useEffect(() => {
@@ -45,7 +71,7 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
                 <li>
                   <a
                     href="#Home"
-                    onClick={() => setActive("Home")}
+                    onClick={closeHomeLink}
                     className={`${active === "Home" ? "text-red-500 " : "text-black"}`}
                   >
                     HOME
@@ -54,7 +80,7 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
                 <li>
                   <a
                     href="#Shop"
-                    onClick={() => setActive("Shop")}
+                    onClick={closeShopLink}
                     className={`${active === "Shop" ? "text-red-500" : "text-black"}`}
                   >
                     SHOP
@@ -63,7 +89,7 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
                 <li>
                   <a
                     href="#Collection"
-                    onClick={() => setActive("Collection")}
+                    onClick={closeCollectionLink}
                     className={`${active === "Collection" ? "text-red-500" : "text-black"}`}
                   >
                     COLLECTIONS
@@ -72,7 +98,7 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
                 <li>
                   <a
                     href="#About"
-                    onClick={() => setActive("About")}
+                    onClick={closeAboutLink}
                     className={`${active === "About" ? "text-red-500" : "text-black"}`}
                   >
                     ABOUT
@@ -81,7 +107,7 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
                 <li>
                   <a
                     href="#Contact"
-                    onClick={() => setActive("Contact")}
+                    onClick={closeContactLink}
                     className={`${active === "Contact" ? "text-red-500" : "text-black"}`}
                   >
                     CONTACT
@@ -205,7 +231,7 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
               onClick={() => setShowCart(!showCart)}
               className="flex relative"
             >
-              <HiOutlineShoppingBag size={20} />{" "}
+              <FaShoppingCart size={20} />{" "}
               <div className={`bg-red-500 w-3 h-3 absolute -right-1 rounded-full flex items-center justify-center text-sm text-white ${cart.length >= 10 ? "px-2.5 py-2.5" : "px-2 py-2"} `}>
                 {cart.length}
               </div>
