@@ -596,7 +596,7 @@ const Productssection = ({cart, setCart, showCart, setShowCart}) => {
         {
             
             product.slice(0, numberProduct).map((product)=>(
-                <div className='border px-2 py-2 relative '>
+                <div className='border border-black/10 px-2 py-2 relative '>
                     <div className='absolute bg-black text-white w-10 flex items-center justify-center'>{product.id}</div>
                     <img src={product.img} alt={product.id} className='w-full h-70 object-cover hover:rotate-y-180 transition-all duration-400' />
                     <h1 className='line-clamp-1'>{product.productName}</h1>

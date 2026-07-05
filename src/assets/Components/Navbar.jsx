@@ -13,6 +13,29 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
   const [navBackground, setNavBackGround] = useState(false);
 
   const [active, setActive] = useState("Home");
+
+  // fetching active nav link  from localStorage
+       useEffect(()=> {
+        try{
+          const saveactive = localStorage.getItem("Active");
+
+          if(saveactive){
+             setActive(JSON.parse(saveactive))
+          }
+        } catch(error){
+          console.log(error);
+          localStorage.removeItem("Active")
+        }
+      
+    }, [])
+  
+  // saving Active nav link to localStorage
+    useEffect(()=> {
+      if(active ){
+        localStorage.setItem("Active", JSON.stringify(active)) 
+      }
+     
+    },[active])
    
  const closeHomeLink = ()=> {
        setActive("Home")
@@ -125,9 +148,9 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
                   textcolor="white"
                 />
 
-                <buttton className="border border-black py-2 px-3 rounded text-sm font-semibold">
+                <button className="border border-black py-2 px-3 rounded text-sm font-semibold">
                   SHOP JOGGERS
-                </buttton>
+                </button>
               </div>
             </div>
 
@@ -221,12 +244,13 @@ const Navbar = ({ cart, showCart, setShowCart }) => {
               PRECIS<span className="font-light text-sm italic">LUXE</span>
             </h1>
           </div>
-
+              
           <div className="flex gap-3">
             <CiSearch size={20} />
             <div className="hidden lg:block">
               <IoPersonOutline size={20} />
             </div>
+            
             <div
               onClick={() => setShowCart(!showCart)}
               className="flex relative"

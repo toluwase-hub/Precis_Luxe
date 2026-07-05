@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from './Button'
+import Popup from './Popup'
 
 const About = () => {
+
+const[Learn, setLearn] = useState(false)
+
+const Handlelearn = ()=> {
+    setLearn(!Learn)
+}
+
   return (
+    <div>
+        <div className={`${Learn ? "flex" : "hidden"}`}>
+
+        
+        <Popup
+        icon = "😒"
+        notification = "Coming Soon"
+        subtext = "Try Later"
+        action = {()=> Handlelearn(Learn)}
+        button2action = {()=> Handlelearn(Learn)}
+         />
+         </div>
+    
     <div id='About' className='contain scroll-mt-24 '>
 
         <h1 className='text-center font-bold text-4xl'>ABOUT US</h1>
@@ -24,7 +45,10 @@ const About = () => {
 
                 <Button
                 buttontext = "LEARN MORE"
-                textcolor = "white" />
+                textcolor = "white"
+                action = {()=> Handlelearn(Learn) }
+                
+                 />
             </div>
 
 
@@ -36,6 +60,7 @@ const About = () => {
 
 
         </div>
+    </div>
     </div>
   )
 }

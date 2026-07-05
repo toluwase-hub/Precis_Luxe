@@ -5,7 +5,7 @@ const Whatsappicon = () => {
 
   
     const PhoneNumber = '+2349043933210' ;
-    const message = 'Hello, Dev%20Tee%20i%20came%20across%20Your%20Portfolio%20and%20wanted%20reach%20out!';
+     const message = 'Hello, Precis_Luxe%20From%20Your%20Website%20Want%20To%20Ask%20About%20Some%20Products!';
     const whatsappurl = `https://wa.me/${PhoneNumber}?text=${message}`;
   
   return (
